@@ -2,8 +2,11 @@
   "name": "worldgen",
   "version": "0.1.0",
   "description": "A fun and exciting world generator!",
-  "main": "lib/index.js",
+  "main": "npm run build && $BROWSER ./index.html",
   "scripts": {
+    "build": "npm run build:compile && npm run build:bundle",
+    "build:compile": "coffee --compile -o lib/ src/",
+    "build:bundle": "browserify lib/drawings.js > bin/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
