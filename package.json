@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build:compile && npm run build:bundle",
     "build:compile": "coffee --compile -o lib/ src/",
-    "build:bundle": "browserify lib/drawings.js > bin/bundle.js",
+    "build:bundle": "browserify lib/delaunay.js > bin/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
